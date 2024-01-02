@@ -1,0 +1,73 @@
+@import "main.scss";
+@import "cssClasses.scss";
+
+.otpContainer {
+  @include container;
+  @include height(496);
+  width: 100vw;
+  flex-direction: column;
+  background-image: url(../assets/LoginBg.png);
+}
+
+.otpFormContainer {
+  @include container;
+  @include width(524);
+  @include height(240);
+  @include margint(139);
+  @include marginb(117);
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+}
+
+.otpFormContainer>form>p {
+  @include height(36);
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(1vw*calc(calc(19 * 100)/1440));
+  line-height: calc(1vw*calc(calc(36 * 100)/1440));
+  letter-spacing: -0.015em;
+  text-transform: capitalize;
+}
+
+.inputContainer {
+  @include container;
+  @include width(567);
+  @include height(36);
+  @include marginb(21);
+  justify-content: space-between;
+}
+
+.inputContainer>img {
+  @include width(34);
+  @include height(34);
+}
+
+.inputContainer>input {
+  @include height(36);
+  @include phwidth(9, 524);
+  Background-color: white;
+  color: #3A5B55;
+  opacity: 0.5;
+  border: 0;
+  border-radius: 10px;
+}
+
+.otpFormButtonContainer {
+  @include container;
+  @include phwidth(44, 567);
+  @include height(34);
+  @include margint(16);
+  justify-content: flex-start;
+}
+
+#submit {
+  @include container;
+  @include width(109);
+  @include height(34);
+  font-style: normal;
+  font-size: calc(1vw*calc(calc(12 * 100)/1440));
+  line-height: calc(1vw*calc(calc(15 * 100)/1440));
+  text-align: center;
+  letter-spacing: -0.015em;
+}

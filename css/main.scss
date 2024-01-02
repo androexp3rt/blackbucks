@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+@mixin width($w) {
+  @media only screen and (max-width: 600px) {
+    width: calc(1vw*calc(calc($w * 100)/900));
+  }
+
+  width: calc(1vw*calc(calc($w * 100)/1440));
+}
+
+@mixin min-width($w) {
+  @media only screen and (max-width: 600px) {
+    min-width: calc(1vw*calc(calc($w * 100)/900));
+  }
+
+  min-width: calc(1vw*calc(calc($w * 100)/1440));
+}
+
+@mixin max-width($w) {
+  @media only screen and (max-width: 600px) {
+    max-width: calc(1vw*calc(calc($w * 100)/900));
+  }
+
+  max-width: calc(1vw*calc(calc($w * 100)/1440));
+}
+
+@mixin height($h) {
+  @media only screen and (max-width: 600px) {
+    height: calc(1vw*calc(calc($h * 100)/900));
+  }
+
+  height: calc(1vw*calc(calc($h * 100)/1440));
+}
+
+@mixin min-height($h) {
+  @media only screen and (max-width: 600px) {
+    min-height: calc(1vw*calc(calc($h * 100)/900));
+  }
+
+  min-height: calc(1vw*calc(calc($h * 100)/1440));
+}
+
+@mixin max-height($h) {
+  @media only screen and (max-width: 600px) {
+    max-height: calc(1vw*calc(calc($h * 100)/900));
+  }
+
+  max-height: calc(1vw*calc(calc($h * 100)/1440));
+}
+
+@mixin padding($p) {
+  @media only screen and (max-width: 600px) {
+    padding: calc(1vw*calc(calc($p * 100)/900));
+  }
+
+  padding: calc(1vw*calc(calc($p * 100)/1440));
+}
+
+@mixin paddingt($pt) {
+  @media only screen and (max-width: 600px) {
+    padding-top: calc(1vw*calc(calc($pt * 100)/900));
+  }
+
+  padding-top: calc(1vw*calc(calc($pt * 100)/1440));
+}
+
+@mixin paddingb($pb) {
+  @media only screen and (max-width: 600px) {
+    padding-bottom: calc(1vw*calc(calc($pb * 100)/900));
+  }
+
+  padding-bottom: calc(1vw*calc(calc($pb * 100)/1440));
+}
+
+@mixin paddingl($pl) {
+  @media only screen and (max-width: 600px) {
+    padding-left: calc(1vw*calc(calc($pl * 100)/900));
+  }
+
+  padding-left: calc(1vw*calc(calc($pl * 100)/1440));
+}
+
+@mixin paddingr($pr) {
+  @media only screen and (max-width: 600px) {
+    padding-right: calc(1vw*calc(calc($pr * 100)/900));
+  }
+
+  padding-right: calc(1vw*calc(calc($pr * 100)/1440));
+}
+
+@mixin paddingh($ph) {
+  @media only screen and (max-width: 600px) {
+    padding-left: calc(1vw*calc(calc($ph * 100)/900));
+    padding-right: calc(1vw*calc(calc($ph * 100)/900));
+  }
+
+  padding-left: calc(1vw*calc(calc($ph * 100)/1440));
+  padding-right: calc(1vw*calc(calc($ph * 100)/1440));
+}
+
+@mixin paddingv($pv) {
+  @media only screen and (max-width: 600px) {
+    padding-top: calc(1vw*calc(calc($pv * 100)/900));
+    padding-bottom: calc(1vw*calc(calc($pv * 100)/900));
+  }
+
+  padding-top: calc(1vw*calc(calc($pv * 100)/1440));
+  padding-bottom: calc(1vw*calc(calc($pv * 100)/1440));
+}
+
+@mixin plwidth($p , $w) {
+  @media only screen and (max-width: 600px) {
+    width: calc(1vw*calc(calc(calc(#{$w} - #{$p * 2}) * 100)/900));
+    @include paddingl($p);
+  }
+
+  width: calc(1vw*calc(calc(calc(#{$w} - #{$p * 2}) * 100)/1440));
+  @include paddingl($p);
+}
+
+@mixin phwidth($p , $w) {
+  @media only screen and (max-width: 600px) {
+    width: calc(1vw*calc(calc(calc(#{$w} - #{$p * 2})) * 100)/900);
+    @include paddingh(#{$p});
+  }
+
+  width: calc(1vw*calc(calc(calc(#{$w} - #{$p * 2})) * 100)/1440);
+  @include paddingh(#{$p});
+}
+
+@mixin pvheight($p , $h) {
+  @media only screen and (max-width: 600px) {
+    height: calc(1vw*calc(calc(calc(#{$h} - #{$p * 2})) * 100)/900);
+    @include paddingv(#{$p});
+  }
+
+  height: calc(1vw*calc(calc(calc(#{$h} - #{$p * 2})) * 100)/1440);
+  @include paddingv(#{$p});
+}
+
+@mixin pwh($ph , $pv , $w , $h) {
+  @media only screen and (max-width: 600px) {
+    width: calc(1vw*calc(calc(calc(#{$w} - #{$ph * 2}) * 100)/900));
+    height: calc(1vw*calc(calc(calc(#{$h} - #{$pv * 2}) * 100)/900));
+    @include paddingh($ph);
+    @include paddingv($pv);
+  }
+
+  width: calc(1vw*calc(calc(calc(#{$w} - #{$ph * 2}) * 100)/1440));
+  height: calc(1vw*calc(calc(calc(#{$h} - #{$pv * 2}) * 100)/1440));
+  @include paddingh($ph);
+  @include paddingv($pv);
+}
+
+@mixin margin($m) {
+  @media only screen and (max-width: 600px) {
+    margin: calc(1vw*calc(calc($m * 100)/900));
+  }
+
+  margin: calc(1vw*calc(calc($m * 100)/1440));
+}
+
+@mixin margint($mt) {
+  @media only screen and (max-width: 600px) {
+    margin-top: calc(1vw*calc(calc($mt * 100)/900));
+  }
+
+  margin-top: calc(1vw*calc(calc($mt * 100)/1440));
+}
+
+@mixin marginb($mb) {
+  @media only screen and (max-width: 600px) {
+    margin-bottom: calc(1vw*calc(calc($mb * 100)/900));
+  }
+
+  margin-bottom: calc(1vw*calc(calc($mb * 100)/1440));
+}
+
+@mixin marginl($ml) {
+  @media only screen and (max-width: 600px) {
+    margin-left: calc(1vw*calc(calc($ml * 100)/900));
+  }
+
+  margin-left: calc(1vw*calc(calc($ml * 100)/1440));
+}
+
+@mixin marginr($mr) {
+  @media only screen and (max-width: 600px) {
+    margin-right: calc(1vw*calc(calc($mr * 100)/900));
+  }
+
+  margin-right: calc(1vw*calc(calc($mr * 100)/1440));
+}
+
+@mixin marginh($mh) {
+  @media only screen and (max-width: 600px) {
+    margin-left: calc(1vw*calc(calc($mh * 100)/900));
+    margin-right: calc(1vw*calc(calc($mh * 100)/900));
+  }
+
+  margin-left: calc(1vw*calc(calc($mh * 100)/1440));
+  margin-right: calc(1vw*calc(calc($mh * 100)/1440));
+}
+
+@mixin marginv($mv) {
+  @media only screen and (max-width: 600px) {
+    margin-top: calc(1vw*calc(calc($mv * 100)/900));
+    margin-bottom: calc(1vw*calc(calc($mv * 100)/900));
+  }
+
+  margin-top: calc(1vw*calc(calc($mv * 100)/1440));
+  margin-bottom: calc(1vw*calc(calc($mv * 100)/1440));
+}
+
+@mixin border($b, $t) {
+  @media only screen and (max-width: 600px) {
+    border: calc(1vw*calc(calc(#{$b} * 100)/900)) #{$t};
+  }
+
+  border: calc(1vw*calc(calc(#{$b} * 100)/1440)) #{$t};
+}
+
+@mixin bordert($bt, $t) {
+  @media only screen and (max-width: 600px) {
+    border-top: calc(1vw*calc(calc(#{$bt} * 100)/900)) #{$t};
+  }
+
+  border-top: calc(1vw*calc(calc(#{$bt} * 100)/1440)) #{$t};
+}
+
+@mixin borderl($bl, $t) {
+  @media only screen and (max-width: 600px) {
+    border-left: calc(1vw*calc(calc(#{$bl} * 100)/900)) #{$t};
+  }
+
+  border-left: calc(1vw*calc(calc(#{$bl} * 100)/1440)) #{$t};
+}
+
+@mixin borderr($br, $t) {
+  @media only screen and (max-width: 600px) {
+    border-right: calc(1vw*calc(calc(#{$br} * 100)/900)) #{$t};
+  }
+
+  border-right: calc(1vw*calc(calc(#{$br} * 100)/1440)) #{$t};
+}
+
+@mixin borderb($bb, $t) {
+  @media only screen and (max-width: 600px) {
+    border-bottom: calc(1vw*calc(calc(#{$bb} * 100)/900)) #{$t};
+  }
+
+  border-bottom: calc(1vw*calc(calc(#{$bb} * 100)/1440)) #{$t};
+}
+
+@mixin border-radius($tl, $bl, $br, $tr) {
+  @media only screen and (max-width: 600px) {
+    border-top-left-radius: calc(1vw*calc(calc($tl * 100)/900));
+    border-bottom-left-radius: calc(1vw*calc(calc($bl * 100)/900));
+    border-bottom-right-radius: calc(1vw*calc(calc($br * 100)/900));
+    border-top-right-radius: calc(1vw*calc(calc($tr * 100)/900));
+  }
+
+  border-top-left-radius: calc(1vw*calc(calc($tl * 100)/1440));
+  border-bottom-left-radius: calc(1vw*calc(calc($bl * 100)/1440));
+  border-bottom-right-radius: calc(1vw*calc(calc($br * 100)/1440));
+  border-top-right-radius: calc(1vw*calc(calc($tr * 100)/1440));
+}
+
+@mixin top($tl) {
+  @media only screen and (max-width: 600px) {
+    top: calc(1vw*calc(calc($tl * 100)/900));
+  }
+
+  top: calc(1vw*calc(calc($tl * 100)/1440));
+}
+
+@mixin right($tl) {
+  @media only screen and (max-width: 600px) {
+    right: calc(1vw*calc(calc($tl * 100)/900));
+  }
+
+  right: calc(1vw*calc(calc($tl * 100)/1440));
+}
+
+@mixin left($tl) {
+  @media only screen and (max-width: 600px) {
+    left: calc(1vw*calc(calc($tl * 100)/900));
+  }
+
+  left: calc(1vw*calc(calc($tl * 100)/1440));
+}
+
+@mixin bottom($tl) {
+  @media only screen and (max-width: 600px) {
+    bottom: calc(1vw*calc(calc($tl * 100)/900));
+  }
+
+  bottom: calc(1vw*calc(calc($tl * 100)/1440));
+}
+
+@mixin center($tl) {
+  @media only screen and (max-width: 600px) {
+    $t: calc($tl * 100 / 900);
+    $tt: calc(calc(100 - $t)/2);
+    left: calc(1vw * $tt);
+  }
+
+  $t: calc($tl * 100 / 1440);
+  $tt: calc(calc(100 - $t)/2);
+  left: calc(1vw * $tt);
+  // left: calc(1vw * calc(calc(100 - calc($tl * 100 / 1440))/2));
+}
+@mixin center-right($tl) {
+  @media only screen and (max-width: 600px) {
+    $t: calc($tl * 100 / 900);
+    $tt: calc(50 + calc(calc(50 - $t)/2));
+    left: calc(1vw * $tt);
+  }
+
+  $t: calc($tl * 100 / 1440);
+  $tt: calc(50 + calc(calc(50 - $t)/2));
+  left: calc(1vw * $tt);
+  // left: calc(1vw * calc(50 + calc(calc(50 - calc($tl * 100 / 1440))/2)));
+}
+@mixin center-left($tl) {
+  @media only screen and (max-width: 600px) {
+    $t: calc($tl * 100 / 900);
+    $tt: calc(calc(50 - $t)/2);
+    left: calc(1vw * $tt);
+  }
+
+  $t: calc($tl * 100 / 1440);
+  $tt: calc(calc(50 - $t)/2);
+  left: calc(1vw * $tt);
+  // left: calc(1vw * calc(calc(50 - calc($tl * 100 / 1440))/2));
+}
+
+@mixin box-shadow($tl, $bl, $br, $tr, $c) {
+  @media only screen and (max-width: 600px) {
+    box-shadow: calc(1vw*calc(calc($tl * 100)/900)) calc(1vw*calc(calc($bl * 100)/900)) calc(1vw*calc(calc($br * 100)/900)) calc(1vw*calc(calc($tr * 100)/900)) $c;
+  }
+
+  box-shadow:calc(1vw*calc(calc($tl * 100)/1440)) calc(1vw*calc(calc($bl * 100)/1440)) calc(1vw*calc(calc($br * 100)/1440)) calc(1vw*calc(calc($tr * 100)/1440)) $c;
+}
+
+@mixin font-size($s, $w, $h) {
+  @media only screen and (max-width: 600px) {
+    font-style: normal;
+    font-size: calc(1vw*calc(calc($s * 100)/900));
+    font-weight: $w;
+    line-height: calc(1vw*calc(calc($h * 100)/900));
+    letter-spacing: -0.015em;
+  }
+
+  font-style: normal;
+  font-size: calc(1vw*calc(calc($s * 100)/1440));
+  font-weight: $w;
+  line-height: calc(1vw*calc(calc($h * 100)/1440));
+  letter-spacing: -0.015em;
+}
+
+@mixin container($r) {
+  display: flex;
+  flex-direction: $r;
+  align-items: center;
+  justify-content: center;
+}

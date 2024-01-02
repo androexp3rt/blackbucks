@@ -1,0 +1,98 @@
+@import "cssClasses.scss";
+
+//-----------------------------------------------------phone/laptop Css----------------------------------------------------------//
+//Login Container
+.loginContainer {
+    @include container(column);
+    width: 100vw;
+    height: 34.5vw;
+    background-image: url(../assets/login/loginBg.png);
+    background-size: contain;
+}
+
+// login form
+.loginContainer>div:nth-child(1)>form:nth-child(1) {
+    @include container(column);
+    @include width(524);
+    @include margint(20);
+    @include font-size(18, 500, 24);
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #FFFFFF;
+}
+
+// login form heading (para)
+.loginContainer>div:nth-child(1)>form:nth-child(1)>p:nth-child(1) {
+    @include width(524);
+    @include height(36);
+    @include font-size(20, 700, 36);
+    text-transform: capitalize
+}
+
+// login button container 
+.loginContainer>div:nth-child(1)>form:nth-child(1)>div:nth-child(5) {
+    @include container(row);
+    @include width(262);
+    @include height(36);
+    @include marginb(21);
+    justify-content: space-between
+}
+
+//login btn
+.loginContainer>div:nth-child(1)>form:nth-child(1)>div:nth-child(5)>input:nth-child(1) {
+    @include width(110);
+    @include height(36);
+    @include font-size(18, 500, 24);
+}
+
+// login Form container > or (paragraph)
+.loginContainer>div:nth-child(1)>form:nth-child(1)>div:nth-child(5)>p:nth-child(2) {
+    @include container(row);
+    @include width(36);
+    @include height(36);
+}
+
+// signup button
+.loginContainer>div:nth-child(1)>form:nth-child(1)>div:nth-child(5)>a:nth-child(3) {
+    @include width(110);
+    @include height(36);
+    @include font-size(18, 500, 24)
+}
+
+// login Form container > forgot password (paragraph)
+.loginContainer>div:nth-child(1)>form:nth-child(1)>a:nth-child(6) {
+    @include height(36);
+}
+
+// altsignup container 
+.altLoginContainer {
+    @include container(column);
+    @include height(125);
+    @include border-radius(0, 50, 50, 0);
+    width: 100vw;
+    background-color: #1E5C54;
+    color: #FFFFFF;
+}
+
+// or signup with (paragraph)
+.altLoginContainer>p:nth-child(1) {
+    @include width(150);
+    @include height(24);
+    @include font-size(18, 500, 24);
+    text-align: center
+}
+
+// insta fb linked container
+.altLoginContainer>div:nth-child(2) {
+    @include container(row);
+    @include width(226);
+    @include height(56);
+    @include margint(20);
+    justify-content: space-between
+}
+
+// insta fb linkd images
+.altLoginContainer>div:nth-child(2)>img {
+    @include width(56);
+    @include height(56)
+}

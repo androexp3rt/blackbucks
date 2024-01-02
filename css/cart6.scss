@@ -1,0 +1,400 @@
+@import "main.scss";
+@import "cssClasses.scss";
+
+/* The cart Page*/
+.cartContainer {
+  @include container;
+  @include phwidth(55, 1440);
+  @include pvheight(55, 658);
+  align-items: flex-start;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.cartItemsContainer {
+  @include container;
+  @include width(747);
+  @include height(545);
+  @include border(3, solid grey);
+  border-radius: calc(1vw*calc(calc(40 * 100)/1440));
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.cartItemsHeader {
+  @include container;
+  @include phwidth(34, 747);
+  @include pvheight(21.5, 136);
+  @include borderb(1, solid grey);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cartItemsHeader>div {
+  @include container;
+  @include width(679);
+  @include height(35);
+  justify-content: flex-start;
+}
+
+.cartItemsHeader>div>img {
+  @include container;
+  @include width(28);
+  @include height(28);
+  border-radius: calc(1vw*calc(calc(50 * 100)/1440));
+}
+
+.cartItemsHeader>div>span {
+  @include container;
+  @include width(450);
+  @include height(35);
+  @include marginl(20);
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(1vw*calc(calc(16 * 100)/1440));
+  line-height: calc(1vw*calc(calc(20 * 100)/1440));
+  letter-spacing: -0.015em;
+  justify-content: flex-start;
+}
+
+.cartItemsHeader>div>span>span {
+  font-size: calc(1vw*calc(calc(14 * 100)/1440));
+  font-weight: 300;
+}
+
+.cartItemsHeader>div>div {
+  @include container;
+  @include width(105);
+  @include height(35);
+  @include marginl(10);
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(1vw*calc(calc(16 * 100)/1440));
+  line-height: calc(1vw*calc(calc(20 * 100)/1440));
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #EAA923;
+}
+
+.cartItemsFooter {
+  @include container;
+  @include pwh(54, 25, 747, 409);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cartItemsFooter>h2 {
+  @include container;
+  @include width(629 - 44);
+  @include height(35);
+  @include marginl(44);
+  @include marginb(15);
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(1vw*calc(calc(30 * 100)/1440));
+  line-height: calc(1vw*calc(calc(29 * 100)/1440));
+  text-align: center;
+  letter-spacing: -0.015em;
+  justify-content: flex-start;
+}
+
+.cartItemsFooterItemsContainer {
+  @include container;
+  @include width(639);
+  overflow-y: scroll;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.cartItemsFooterItemContainer {
+  @include container;
+  @include width(629);
+  @include height(215);
+  flex-direction: column;
+  margin-bottom: calc(1vw*calc(calc(25 * 100)/1440));
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.cartItemsFooterItemNameContainer {
+  @include container;
+  @include width(629 - 4);
+  @include height(48);
+  @include borderl(4, solid #EAA923);
+  @include marginb(2);
+  justify-content: flex-start;
+}
+
+.cartItemsFooterItemNameContainer>span {
+  @include container;
+  @include width(625 - 38);
+  @include height(21);
+  @include marginl(38);
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(1vw*calc(calc(18 * 100)/1440));
+  line-height: calc(1vw*calc(calc(22 * 100)/1440));
+  letter-spacing: -0.015em;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cartItemsFooterItemPriceUnitContainer {
+  @include container;
+  @include width(629 - 42);
+  @include height(101);
+  @include marginl(42);
+  @include marginb(11);
+  justify-content: flex-start;
+}
+
+.cartItemsFooterItemPriceUnitContainer>img {
+  @include width(126);
+  @include height(95);
+  @include border(3, solid #ccc);
+  border-radius: calc(1vw*calc(calc(25 * 100)/1440));
+  text-align: center;
+}
+
+.cartItemsFooterItemPriceUnitContainer>span {
+  @include width(85);
+  @include height(21);
+  @include marginl(68);
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(1vw*calc(calc(18 * 100)/1440));
+  line-height: calc(1vw*calc(calc(22 * 100)/1440));
+  letter-spacing: -0.015em;
+}
+
+.cartItemsFooterItemUnitContainer {
+  @include container;
+  @include phwidth(23, 172);
+  @include height(52);
+  @include marginl(128);
+  filter: drop-shadow(0vw calc(1vw*calc(calc(4 * 100)/1440)) calc(1vw*calc(calc(4 * 100)/1440)) #00000040);
+  @include border(1, solid #D9D9D9);
+  border-radius: calc(1vw*calc(calc(6 * 100)/1440));
+  background-color: #FFFFFF;
+  justify-content: space-between;
+}
+
+.cartItemsFooterItemUnitContainer>div {
+  @include container;
+  @include width(22);
+  @include height(22);
+  cursor: pointer;
+}
+
+.cartItemsFooterItemUnitContainer>div>img {
+  @include width(22);
+}
+
+.cartItemsFooterItemUnitContainer>span {
+  @include container;
+  @include width(27);
+  @include height(18);
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(1vw*calc(calc(24 * 100)/1440));
+  line-height: calc(1vw*calc(calc(29 * 100)/1440));
+  letter-spacing: -0.015em;
+  color: #1E5C54;
+}
+
+.cartItemsFooterItemPrepDescContainer {
+  @include container;
+  @include width(587);
+  @include height(51);
+  @include marginl(42);
+  position: relative;
+  justify-content: flex-start;
+}
+
+.cartItemsFooterItemPrepDescContainer>img {
+  @include container;
+  @include width(47);
+  @include height(33);
+  position: absolute;
+  top: calc(1vw*calc(calc(10 * 100)/1440));
+  left: calc(1vw*calc(calc(26.5 * 100)/1440));
+  color: white;
+}
+
+.cartItemsFooterItemPrepDescContainer>input {
+  @include height(51);
+  @include phwidth(100, 587);
+  @include border(1, solid #D9D9D9);
+  background-color: white;
+  font-size: calc(1vw*calc(calc(18 * 100)/1440));
+  border-radius: calc(1vw*calc(calc(10 * 100)/1440));
+}
+
+.cartBillOuterContainer {
+  @include container;
+  @include width(528);
+  @include height(545);
+}
+
+.cartBillContainer {
+  @include container;
+  @include width(522);
+  @include height(545);
+  @include border(3, solid grey);
+  border-radius: calc(1vw*calc(calc(40 * 100)/1440));
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cartBillHeader {
+  @include container;
+  @include width(472);
+  @include height(216);
+  @include margint(35);
+  @include paddingh(25);
+  @include borderb(1, solid #D9D9D9);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cartBillHeader>h4 {
+  @include width(472);
+  @include height(35);
+  @include marginb(7);
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(1vw*calc(calc(32 * 100)/1440));
+  line-height: calc(1vw*calc(calc(39 * 100)/1440));
+  letter-spacing: -0.015em;
+}
+
+.cartBillHeader>div:nth-child(2) {
+  @include container;
+  @include width(472);
+  @include height(106);
+  @include borderb(1, solid #D9D9D9);
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cartBillHeader>div:nth-child(2)>div {
+  @include container;
+  @include width(410);
+  @include height(25);
+  @include marginl(39);
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(1vw*calc(calc(15 * 100)/1440));
+  line-height: calc(1vw*calc(calc(15 * 100)/1440));
+  letter-spacing: -0.015em;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cartBillHeader>div:nth-child(3) {
+  @include container;
+  @include width(472);
+  @include height(67);
+  flex-direction: column;
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(1vw*calc(calc(20 * 100)/1440));
+  line-height: calc(1vw*calc(calc(24 * 100)/1440));
+  letter-spacing: -0.015em;
+  align-items: flex-start;
+}
+
+.cartBillHeader>div:nth-child(3)>div {
+  @include container;
+  @include width(422);
+  @include height(24);
+  @include marginl(25);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cartBillOffer {
+  @include container;
+  @include width(522);
+  @include height(167);
+  @include marginb(37);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.cartBillOfferItemContainer {
+  @include container;
+  @include phwidth(49, 522);
+  @include pvheight(16, 83);
+  @include borderb(1, solid #D9D9D9);
+}
+
+.cartBillOfferItemContainer>div {
+  @include container;
+  @include width(424);
+  @include height(40);
+  cursor: pointer;
+}
+
+.cartBillOfferItemContainer>div>img:nth-child(1) {
+  @include width(51);
+  @include height(51);
+}
+
+.cartBillOfferItemContainer>div>p {
+  @include container;
+  @include width(339);
+  @include height(51);
+  @include marginl(19);
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(1vw*calc(calc(16 * 100)/1440));
+  line-height: calc(1vw*calc(calc(20 * 100)/1440));
+  letter-spacing: -0.015em;
+  justify-content: flex-start;
+  color: #205B55;
+}
+
+.cartBillOfferItemContainer>div>img:nth-child(3) {
+  @include width(15);
+}
+
+.cartBillFooter {
+  @include container;
+  @include phwidth(76, 522);
+  @include height(89);
+  background-color: #1E5C54;
+  box-shadow: 0vw calc(1vw*calc(calc(4 * 100)/1440)) calc(1vw*calc(calc(4 * 100)/1440)) rgba(0, 0, 0, 0.25);
+  border-radius: 0vw 0vw calc(1vw*calc(calc(39 * 100)/1440)) calc(1vw*calc(calc(39 * 100)/1440));
+}
+
+.cartBillFooter>div {
+  @include container;
+  @include width(370);
+  @include height(40);
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cartBillFooter>div>span {
+  @include width(355);
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(1vw*calc(calc(24 * 100)/1440));
+  line-height: calc(1vw*calc(calc(29 * 100)/1440));
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+}
+
+.cartBillFooter>div>img {
+  @include width(15);
+}

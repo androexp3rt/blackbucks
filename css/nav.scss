@@ -1,0 +1,650 @@
+@import "main.scss";
+@import "cssClasses.scss";
+
+//------------------------------------------------------------------------------------------------------------------//
+//--------------------------------------------------navbar css------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------//
+
+//--------------------------------------------big navbar laptop css-------------------------------------------------//
+.navBig {
+  @include container(row);
+  @include phwidth(78.5, 1440);
+  @include height(116);
+  @include borderb(1, solid Black);
+}
+
+// .navbarLogoContainer
+.navBig>div:nth-child(1) {
+  @include width(303);
+  @include height(110);
+}
+
+// .navbarLogo
+.navBig>div:nth-child(1)>img {
+  @include width(303);
+  @include height(110);
+}
+
+// .navbarMenuContainer {
+.navBig>div:nth-child(2) {
+  @include container(row);
+  @include width(495);
+  @include height(110);
+  @include paddingh(107);
+  color: #1E5C54;
+  justify-content: space-between;
+}
+
+// .navbarMenuContainer>a {
+.navBig>div:nth-child(2)>a {
+  @include container(row);
+  @include height(20);
+  @include font-size(16, 500, 20);
+  color: #1E5C54;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+}
+
+.navBig>div:nth-child(2)>a:hover,
+.navBig>div:nth-child(2)>a:active,
+.navBig>div:nth-child(2)>a:focus {
+  color: gold;
+  border-bottom: calc(1vw*calc(calc(2 * 100)/1440)) solid gold;
+}
+
+/* Mercandise btn */
+.navBig>div:nth-child(2)>a:nth-child(4) {
+  flex-direction: column;
+}
+
+/* Mercandise DropDown Content */
+.navBig>div:nth-child(2)>a:nth-child(4)>div {
+  @include container(column);
+  @include width(130);
+  @include height(120);
+  position: absolute;
+  top: calc(1vw * (16 * 100 / 900));
+  // right: 0vw;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+  background-color: #1E5C54;
+  z-index: 1;
+}
+
+.navBig>div:nth-child(2)>a:nth-child(4)>div>div {
+  @include container(row);
+  @include width(130);
+  @include height(59);
+  @include borderb(1, solid #FFFFFF);
+  @include font-size(20, 500, 25);
+  color: #FFFFFF;
+  background-color: #1E5C54;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navBig>div:nth-child(2)>a:nth-child(4)>div>div:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+// .navbarButtonContainer {
+.navBig>div:nth-child(3) {
+  @include container(column);
+  @include width(271);
+  @include height(89);
+}
+
+// .navbarOtherButtonContainer {
+.navBig>div:nth-child(3)>div {
+  @include container(row);
+  width: 100%;
+  height: 50%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+// .navbarLoginButtonContainer {
+.navBig>div:nth-child(3)>div:nth-child(2) {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.navBig>div:nth-child(3)>div:nth-child(1)>div,
+.navBig>div:nth-child(3)>div:nth-child(2)>div {
+  @include width(110);
+  @include height(35);
+}
+
+.navBig>div:nth-child(3) {
+  display: 'none';
+}
+
+//--------------------------------------------big navbar phone css-------------------------------------------------//
+
+.navBigPhone {
+  @include container(row);
+  @include phwidth(30, 900);
+  @include height(116);
+  @include borderb(1, solid Black);
+  justify-content: space-between;
+}
+
+// .navbarLogoContainer
+.navBigPhone>div:nth-child(1) {
+  @include width(277);
+  @include height(100);
+}
+
+// .navbarLogo
+.navBigPhone>div:nth-child(1)>img {
+  @include width(277);
+  @include height(100);
+}
+
+// .navbarMenuContainer {
+.navBigPhone>div:nth-child(2) {
+  @include container(column);
+  @include width(450);
+  height: 100vh;
+  position: absolute;
+  top: 0vw;
+  right: 0vw;
+  color: #1E5C54;
+  background-color: #D9D9D9;
+  overflow-y: scroll;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+//close btn 
+.navBigPhone>div:nth-child(2)>div:nth-child(1) {
+  @include container(row);
+  @include width(35);
+  @include height(35);
+  @include border-radius(60,60,60,60);
+  position: relative;
+  top: 2vw;
+  left: 20vw;
+  cursor: pointer;
+  background-color: #1E5C54;
+}
+
+// close btn image
+.navBigPhone>div:nth-child(2)>div:nth-child(1)>img {
+  @include width(20);
+  @include height(20);
+}
+
+// .navbarMenuContainer>a {
+.navBigPhone>div:nth-child(2)>a {
+  @include container(row);
+  @include width(450);
+  @include height(60);
+  @include font-size(20, 500, 20);
+  text-align: center;
+  color: #1E5C54;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.navBigPhone>div:nth-child(2)>a:hover,
+.navBigPhone>div:nth-child(2)>a:active,
+.navBigPhone>div:nth-child(2)>a:focus {
+  color: #EAA923;
+  @include borderb(2, solid #EAA923);
+}
+
+/* Mercandise btn */
+.navBigPhone>div:nth-child(2)>a:nth-child(4) {
+  @include container(column);
+  @include min-height(60);
+  @include max-height(180);
+}
+
+/* Mercandise DropDown Content */
+.navBigPhone>div:nth-child(2)>a:nth-child(4)>div {
+  @include container(column);
+  @include width(450);
+  @include height(120);
+  position: absolute;
+  top: calc(1vw * (60 * 100 / 900));
+  right: 0vw;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+  background-color: #1E5C54;
+  z-index: 2;
+}
+
+.navBigPhone>div:nth-child(2)>a:nth-child(4)>div>div {
+  @include container(row);
+  @include width(450);
+  @include height(59);
+  @include borderb(1, solid #FFFFFF);
+  @include font-size(20, 500, 25);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navBigPhone>div:nth-child(2)>a:nth-child(4)>div>div:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+// .navbarButtonContainer {
+.navBigPhone>div:nth-child(3) {
+  @include container(row);
+  @include width(377);
+  @include height(35);
+}
+
+// .navbarOtherButtonContainer {
+.navBigPhone>div:nth-child(3)>div:nth-child(1) {
+  @include container(row);
+  @include width(252);
+  @include height(35);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.navBigPhone>div:nth-child(3)>div:nth-child(1)>div {
+  @include width(110);
+  @include height(35);
+  @include marginr(16);
+  @include font-size(14, 500, 24);
+}
+
+// .navbarLoginButtonContainer {
+.navBigPhone>div:nth-child(3)>div:nth-child(2) {
+  @include width(110);
+  @include height(35);
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+
+.navBigPhone>div:nth-child(3)>div:nth-child(2)>div {
+  @include width(110);
+  @include height(35);
+  @include font-size(14, 500, 24);
+}
+
+.navBigPhone>img:nth-child(4) {
+  @include container(row);
+  @include width(60);
+  @include height(35);
+  cursor: pointer;
+}
+
+//------------------------------------------small navbar laptop css------------------------------------------------//
+.navSmall {
+  @include container(row);
+  @include phwidth(78.5, 1440);
+  @include height(70);
+  @include borderb(1, solid Black);
+}
+
+// .navbarLogoContainer
+.navSmall>div:nth-child(1) {
+  @include width(254);
+  @include height(60);
+}
+
+// .navbarLogo
+.navSmall>div:nth-child(1)>img {
+  @include width(254);
+  @include height(60);
+}
+
+// .navbarMenuContainer {
+.navSmall>div:nth-child(2) {
+  @include container(row);
+  @include width(500);
+  @include height(35);
+  @include paddingh(107);
+  color: #1E5C54;
+  justify-content: space-between;
+}
+
+// .navbarMenuContainer>a {
+.navSmall>div:nth-child(2)>a {
+  @include container(row);
+  @include height(35);
+  @include font-size(16, 500, 20);
+  color: #1E5C54;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+}
+
+.navSmall>div:nth-child(2)>a:hover,
+.navSmall>div:nth-child(2)>a:active,
+.navSmall>div:nth-child(2)>a:focus {
+  color: gold;
+  border-bottom: calc(1vw*calc(calc(2 * 100)/1440)) solid gold;
+}
+
+/* Mercandise btn */
+.navSmall>div:nth-child(2)>a:nth-child(4) {
+  flex-direction: column;
+}
+
+/* Mercandise DropDown Content */
+.navSmall>div:nth-child(2)>a:nth-child(4)>div {
+  @include container(column);
+  @include width(130);
+  @include height(120);
+  position: absolute;
+  top: calc(1vw * (16 * 100 / 900));
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+  background-color: #1E5C54;
+  z-index: 1;
+}
+
+.navSmall>div:nth-child(2)>a:nth-child(4)>div>div {
+  @include container(row);
+  @include width(130);
+  @include height(59);
+  @include borderb(1, solid #FFFFFF);
+  @include font-size(20, 500, 25);
+  color: #FFFFFF;
+  background-color: #1E5C54;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navSmall>div:nth-child(2)>a:nth-child(4)>div>div:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+// .navbarButtonContainer {
+.navSmall>div:nth-child(3) {
+  @include container(row);
+  @include width(376);
+  @include height(30);
+  justify-content: space-between;
+}
+
+// searchbar Container 
+.navSmall>div:nth-child(3)>div:nth-child(1) {
+  @include container(row);
+  @include max-width(286);
+  @include height(30);
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+// searchbar icon Container 
+.navSmall>div:nth-child(3)>div:nth-child(1)>div {
+  @include container(row);
+  @include width(46);
+  @include height(30);
+  @include border-radius(10,10,0,0);
+  background-color: #1E5C54;
+}
+
+// searchbar icon image 
+.navSmall>div:nth-child(3)>div:nth-child(1)>div>img {
+  @include width(20);
+  @include height(20);
+}
+
+//searchbar
+.navSmall>div:nth-child(3)>div:nth-child(1)>div>input {
+  @include phwidth(10, 240);
+  @include height(30);
+  @include border-radius(0,0,10,10);
+  border: 'none';
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+  
+}
+
+// find store btn Container
+.navSmall>div:nth-child(3)>div:nth-child(2) {
+  @include container(row);
+  @include phwidth(5,125);
+  @include height(30);
+  @include border-radius(10,10,10,10);
+  @include font-size(13, 500, 19);
+  color: #FFFFFF;
+  background-color: #1E5C54;
+}
+
+// find store btn icon
+.navSmall>div:nth-child(3)>div:nth-child(2)>img {
+  @include width(12);
+  @include height(14);
+  @include marginr(5);
+}
+
+// CART IMAGE
+.navSmall>div:nth-child(3)>img:nth-child(3) {
+  @include width(28);
+  @include height(28);
+}
+
+// wallet IMAGE
+.navSmall>div:nth-child(3)>img:nth-child(4) {
+  @include width(26);
+  @include height(26);
+}
+
+// favourites IMAGE
+.navSmall>div:nth-child(3)>img:nth-child(5) {
+  @include width(20);
+  @include height(26);
+}
+
+// profile IMAGE
+.navSmall>div:nth-child(3)>img:nth-child(6) {
+  @include width(26);
+  @include height(26);
+}
+
+//------------------------------------------small navbar phone css------------------------------------------------//
+.navSmallPhone {
+  @include container(row);
+  @include phwidth(20, 900);
+  @include height(70);
+  @include borderb(1, solid Black);
+  justify-content: space-between;
+}
+
+// .navbarLogoContainer
+.navSmallPhone>div:nth-child(1) {
+  @include width(253);
+  @include height(57);
+}
+
+// .navbarLogo
+.navSmallPhone>div:nth-child(1)>img {
+  @include width(253);
+  @include height(57);
+}
+
+// .navbarMenuContainer {
+.navSmallPhone>div:nth-child(2) {
+  @include container(column);
+  @include width(450);
+  height: 100vh;
+  position: absolute;
+  top: 0vw;
+  right: 0vw;
+  color: #1E5C54;
+  background-color: #D9D9D9;
+  overflow-y: scroll;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+//close btn 
+.navSmallPhone>div:nth-child(2)>div:nth-child(1) {
+  @include container(row);
+  @include width(35);
+  @include height(35);
+  @include border-radius(60,60,60,60);
+  position: relative;
+  top: 2vw;
+  left: 20vw;
+  cursor: pointer;
+  background-color: #1E5C54;
+}
+
+// close btn image
+.navSmallPhone>div:nth-child(2)>div:nth-child(1)>img {
+  @include width(20);
+  @include height(20);
+}
+
+// .navbarMenuContainer>a {
+.navSmallPhone>div:nth-child(2)>a {
+  @include container(row);
+  @include width(450);
+  @include height(60);
+  @include font-size(20, 500, 20);
+  text-align: center;
+  color: #1E5C54;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.navSmallPhone>div:nth-child(2)>a:hover,
+.navSmallPhone>div:nth-child(2)>a:active,
+.navSmallPhone>div:nth-child(2)>a:focus {
+  color: #EAA923;
+  @include borderb(2, solid #EAA923);
+}
+
+/* Mercandise btn */
+.navSmallPhone>div:nth-child(2)>a:nth-child(4) {
+  @include container(column);
+  @include min-height(60);
+  @include max-height(180);
+}
+
+/* Mercandise DropDown Content */
+.navSmallPhone>div:nth-child(2)>a:nth-child(4)>div {
+  @include container(column);
+  @include width(450);
+  @include height(120);
+  position: absolute;
+  top: calc(1vw * (60 * 100 / 900));
+  right: 0vw;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+  background-color: #1E5C54;
+  z-index: 2;
+}
+
+.navSmallPhone>div:nth-child(2)>a:nth-child(4)>div>div {
+  @include container(row);
+  @include width(450);
+  @include height(59);
+  @include borderb(1, solid #FFFFFF);
+  @include font-size(20, 500, 25);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navSmallPhone>div:nth-child(2)>a:nth-child(4)>div>div:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+// .navbarButtonContainer {
+  .navSmallPhone>div:nth-child(3) {
+    @include container(row);
+    @include width(376);
+    @include height(30);
+    justify-content: space-between;
+  }
+  
+  // searchbar Container 
+  .navSmallPhone>div:nth-child(3)>div:nth-child(1) {
+    @include container(row);
+    @include max-width(286);
+    @include height(30);
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  // searchbar icon Container 
+  .navSmallPhone>div:nth-child(3)>div:nth-child(1)>div {
+    @include container(row);
+    @include width(46);
+    @include height(30);
+    @include border-radius(10,10,0,0);
+    background-color: #1E5C54;
+  }
+  
+  // searchbar icon image 
+  .navSmallPhone>div:nth-child(3)>div:nth-child(1)>div>img {
+    @include width(20);
+    @include height(20);
+  }
+  
+  //searchbar
+  .navSmallPhone>div:nth-child(3)>div:nth-child(1)>div>input {
+    @include phwidth(10, 240);
+    @include height(30);
+    @include border-radius(0,0,10,10);
+    border: 'none';
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    
+  }
+  
+  // find store btn Container
+  .navSmallPhone>div:nth-child(3)>div:nth-child(2) {
+    @include container(row);
+    @include phwidth(5,125);
+    @include height(30);
+    @include border-radius(10,10,10,10);
+    @include font-size(13, 500, 19);
+    color: #FFFFFF;
+    background-color: #1E5C54;
+  }
+  
+  // find store btn icon
+  .navSmallPhone>div:nth-child(3)>div:nth-child(2)>img {
+    @include width(12);
+    @include height(14);
+    @include marginr(5);
+  }
+  
+  // CART IMAGE
+  .navSmallPhone>div:nth-child(3)>img:nth-child(3) {
+    @include width(30);
+    @include height(30);
+  }
+  
+  // wallet IMAGE
+  .navSmallPhone>div:nth-child(3)>img:nth-child(4) {
+    @include width(26);
+    @include height(26);
+  }
+  
+  // favourites IMAGE
+  .navSmallPhone>div:nth-child(3)>img:nth-child(5) {
+    @include width(20);
+    @include height(26);
+  }
+  
+  // profile IMAGE
+  .navSmallPhone>div:nth-child(3)>img:nth-child(6) {
+    @include width(26);
+    @include height(26);
+  }  
+
+.navSmallPhone>img:nth-child(4) {
+  @include container(row);
+  @include width(60);
+  @include height(35);
+  cursor: pointer;
+}

@@ -1,0 +1,123 @@
+@import "main.scss";
+@import "cssClasses.scss";
+
+.profileContainer {
+  @include container;
+  @include height(441);
+  width: 100vw;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.alternateProfileContainer {
+  @include container;
+  @include height(92);
+  @include marginb(79);
+  width: 100vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #1E5C54;
+  color: white;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.alternateProfileContainer>img {
+  @include width(124);
+  @include height(124);
+  border-radius: 60px;
+  box-shadow: 2px 2px 10px 0px #cccccc;
+  background-color: #1E5C54;
+  position: relative;
+  top: calc(1vw*calc(calc(19 * 100)/1440));
+  left: calc(calc(100vw - calc(1vw*calc(calc(124 * 100)/1440)))/2);
+}
+
+.alternateProfileContainer>button {
+  @include container;
+  @include width(109);
+  @include height(33);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 36px;
+  letter-spacing: -0.015em;
+  padding: 0;
+  border: 0;
+  position: relative;
+  // top = (parent height - item height)/2
+  top: calc(1vw*calc(calc(29.5 * 100)/1440));
+  left: calc(75vw - calc(1vw*calc(calc(calc(124 + calc(129 / 2)) * 100)/1440)));
+  /*right center
+  left: calc(calc(100vw - calc(1vw*calc(calc(124 * 100)/1440)))/2) + calc(calc(calc(calc(100vw - calc(1vw*calc(calc(124 * 100)/1440)))/2) - calc(1vw*calc(calc(129 * 100)/1440)))/2);
+  left center
+  left: calc(calc(calc(calc(calc(100vw - calc(1vw*calc(calc(124 * 100)/1440)))/2) - calc(1vw*calc(calc(129 * 100)/1440)))/2) - calc(1vw*calc(calc(124 * 100)/1440)));
+  */
+}
+
+.profileNameContainer {
+  @include container;
+  @include height(36);
+  @include marginb(calc(77 - 36));
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.015em;
+  color: #1E5C54;
+}
+
+.profileInfoContainer {
+  @include container;
+  @include width(940);
+  @include height(85);
+  @include marginb(16);
+  justify-content: space-between;
+}
+
+.profileInfoContainer>img {
+  @include container;
+  @include width(29);
+  @include height(28);
+}
+
+.profileContainer>div>p {
+  @include container;
+  @include width(902);
+  @include height(85);
+  text-align: center;
+}
+
+.alternateProfileContainer2 {
+  @include container;
+  @include width(1440);
+  @include height(92);
+  justify-content: space-evenly;
+  background-color: #1E5C54;
+  color: white;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.emailContainer,
+.genderContainer,
+.phoneContainer {
+  @include container;
+  @include phwidth(50, 480);
+  @include height(34);
+}
+
+.emailContainer>img,
+.genderContainer>img,
+.phoneContainer>img {
+  @include width(34);
+  @include height(34);
+}
+
+.emailContainer>span,
+.genderContainer>span,
+.phoneContainer>span {
+  @include container;
+  @include paddingh(8);
+  justify-content: flex-start;
+}

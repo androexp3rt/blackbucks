@@ -1,0 +1,181 @@
+@import "main.scss";
+@import "cssClasses.scss";
+
+#merchandiseWomenContainer,
+#merchandiseMenContainer {
+  @include container;
+  width: calc(1vw*calc(calc(1440 * 100)/1440));
+  flex-direction: column;
+}
+
+#merchandiseHeader {
+  @include container;
+  width: calc(1vw*calc(calc(1440 * 100)/1440));
+  @include height(70);
+  align-items: flex-start;
+  background-color: #1E5C54;
+}
+
+#merchandiseHeader>div {
+  @include container;
+  @include width(100);
+  @include height(120);
+  @include marginh(15);
+  position: relative;
+  top: calc(1vw*calc(calc(10 * 100)/1440));
+  flex-direction: column;
+  justify-content: space-between;
+  color: #1E5C54;
+}
+
+#merchandiseHeader>div :hover,
+#merchandiseHeader>div :active,
+#merchandiseHeader>div :focus {
+  @include borderb(3, solid #EAA923);
+  color: #EAA923;
+}
+
+#merchandiseHeader>div>img {
+  @include border(1, solid #EAA923);
+  @include width(90);
+  @include height(90);
+  border-radius: calc(1vw*calc(calc(100 * 100)/1440));
+}
+
+#merchandiseHeader>div>span {
+  @include container;
+  @include height(20);
+  font-size: calc(1vw*calc(calc(12 * 100)/1440));
+}
+
+#merchandiseBody {
+  @include container;
+  @include width(1440);
+  @include margint(70);
+  background-color: white;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#merchandiseBanner1 {
+  @include container;
+  @include width(1440);
+  @include height(365);
+  @include borderb(50, solid #1E5C54);
+  @include marginb(40);
+  background-image: url(../assets/merchandiseWomenBanner1.png);
+  background-size: contain;
+}
+
+#merchandiseBanner2 {
+  @include container;
+  @include width(1440);
+  @include height(485);
+  @include marginb(10);
+  background-color: #d9d9d9;
+  background-size: contain;
+}
+
+#merchandiseExpandContainer {
+  @include container;
+  @include phwidth(9.5, 1440);
+  max-height: calc(1vw*calc(calc(1440 * 100)/1440));
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.merchandiseListItemContainer {
+  @include width(1420);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.merchandiseListItemContainer>span {
+  @include width(1420);
+  @include height(72);
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(1vw*calc(calc(32 * 100)/1440));
+  line-height: calc(1vw*calc(calc(72 * 100)/1440));
+  letter-spacing: -0.015em;
+}
+
+.listSubMenuItemGrid {
+  @include container;
+  @include width(1420);
+  @include marginb(32);
+  justify-content: space-between;
+}
+
+.subMenuItem {
+  @include container;
+  @include width(335);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.subMenuItem>img {
+  @include width(335);
+  @include height(442);
+}
+
+.subMenuItem>h3 {
+  @include width(335);
+  @include height(20);
+  @include margint(4);
+  @include borderb(1, solid grey);
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(1vw*calc(calc(16 * 100)/1440));
+  line-height: calc(1vw*calc(calc(20 * 100)/1440));
+  text-align: left;
+  letter-spacing: -0.015em;
+}
+
+.subMenuItem>p {
+  @include container;
+  @include width(335);
+  @include height(20);
+  @include margint(5);
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(1vw*calc(calc(12 * 100)/1440));
+  line-height: calc(1vw*calc(calc(15 * 100)/1440));
+  letter-spacing: -0.015em;
+  text-align: left;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.subMenuItem>span {
+  @include container;
+  @include width(335);
+  @include height(20);
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(1vw*calc(calc(12 * 100)/1440));
+  line-height: calc(1vw*calc(calc(15 * 100)/1440));
+  text-align: left;
+  align-items: flex-start;
+  justify-content: flex-start;
+  letter-spacing: -0.015em;
+}
+
+.subMenuItem>div {
+  @include container;
+  @include width(335);
+  @include height(20);
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(1vw*calc(calc(12 * 100)/1440));
+  line-height: calc(1vw*calc(calc(15 * 100)/1440));
+  text-align: left;
+  align-items: flex-start;
+  justify-content: flex-start;
+  letter-spacing: -0.015em;
+}

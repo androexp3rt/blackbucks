@@ -1,0 +1,113 @@
+(yxyZVenBrLEz8oOk0N9DsOPB5oF-Eqp
+
+
+
+
+
+style(p.children[0], {
+				'container': 'row',
+				'width': 277,
+				'height': 100,
+			})
+			style(p.children[0].children[0], {
+				'width': 267,
+				'height': 100,
+			})
+			//hamburger 
+			style(p.children[3], {
+				'container': 'column',
+				'width': 60,
+				'height': 34,
+				'background-image': 'url(assets/dashicons/hamburger.png)',
+				'position': 'absolute',
+				'right': getVW(40),
+				'top': getVW(41),
+				'cursor': 'pointer',
+				'justify-content': 'space-between',
+			})
+			//navMenuContainer
+			style(p.children[1], {
+				'container': 'column',
+				'hide': '',
+				'z-index': 1,
+				'width': 450,
+				'height': 1562,
+				'paddingt': 50,
+				'position': 'absolute',
+				'right': getVW(0),
+				'top': getVW(0),
+				'background-color': '#FFFFFF',
+				'justify-content': 'flex-start',
+			})
+			// navMenuItems
+			for (let i = 0; i < p.children[1].children.length; i++) {
+				if (i == 0) {
+					closeCss(p.children[1].children[i])
+					style(p.children[1].children[i], {
+						'width': 35,
+						'height': 35,
+						'background-color': '#1E5C54',
+						'cursor': 'pointer',
+					})
+					hover(navMenuContainer.children[0], '');
+				} else {
+					style(p.children[1].children[i], {
+						'container': 'row',
+						'width': 450,
+						'height': 70,
+						'border-bottom': getVW(1) + ' solid #1E5C54',
+						'text-decoration': 'none',
+						'color': '#1E5C54',
+						'cursor': 'pointer',
+						'font-size': [22, 500]
+					})
+					hover(navMenuContainer.children[i], 'bb');
+				}
+			}
+			// navButtonContainer
+			style(p.children[2], {
+				'container': 'row',
+				'width': 390,
+				'height': 50,
+				'position': 'absolute',
+				'left': getVW(350),
+				'top': getVW(33),
+				'align-item': 'flex-start',
+				'justify-content': 'flex-start'
+			})
+			// nav other buttons Container 
+			style(p.children[2].children[0], {
+				'container': 'row',
+				'width': 250,
+				'height': 50,
+				'justify-content': 'space-between'
+			})
+			// nav login button Container
+			style(p.children[2].children[1], {
+				'container': 'row',
+				'width': 140,
+				'height': 50,
+				'justify-content': 'flex-end'
+			})
+			// nav other buttons
+			for (let i = 0; i < p.children[2].children[0].children.length; i++) {
+				style(p.children[2].children[0].children[i], {
+					'container': 'row',
+					'width': 110,
+					'height': 35,
+					'font-size': [14, 500],
+				})
+				btn1Css(p.children[2].children[0].children[i])
+				divBtnCss(p.children[2].children[0].children[i])
+			}
+			// nav login button
+			for (let i = 0; i < p.children[2].children[1].children.length; i++) {
+				style(p.children[2].children[1].children[i], {
+					'container': 'row',
+					'width': 110,
+					'height': 35,
+					'font-size': [14, 500],
+				})
+				btn1Css(p.children[2].children[1].children[i])
+				divBtnCss(p.children[2].children[1].children[i])
+			}

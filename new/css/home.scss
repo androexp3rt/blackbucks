@@ -1,0 +1,355 @@
+@import "cssClasses.scss";
+
+//------------------------------------------------------------laptop css--------------------------------------------------//
+.homeContainer {
+  @include container(column);
+  width: 100vw;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+.homeContainer>div:nth-child(1) {
+  @include container(column);
+  width: 100vw;
+  @include marginb(34);
+  align-items: flex-start;
+  color: #FFFFFF;
+}
+
+.homeContainer>div:nth-child(1)>div:nth-child(1) {
+  @include container(row);
+  width: 100vw;
+  @include height(502);
+  position: relative;
+  background-image: url(../assets/home/banner1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.homeContainer>div:nth-child(1)>div:nth-child(1)>p:nth-child(1) {
+  position: absolute;
+  @include left(103);
+  @include top(85);
+  @include font-size(32,700,39);
+}
+
+.homeContainer>div:nth-child(1)>div:nth-child(2) {
+  @include container(row);
+  width: 100vw;
+  @include height(634);
+  position: relative;
+  background-image: url(../assets/home/banner2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.homeContainer>div:nth-child(1)>div:nth-child(2)>p:nth-child(1) {
+  position: absolute;
+  @include left(622);
+  @include top(211);
+  @include font-size(32,500,39);
+}
+
+.homeContainer>div:nth-child(1)>div:nth-child(2)>p:nth-child(2) {
+  @include width(426);
+  @include height(80);
+  @include left(622);
+  @include top(294);
+  @include font-size(16,750,20);
+  position: absolute;
+}
+
+.homeContainer>div:nth-child(2) {
+  @include container(column);
+  width: 100vw;
+}
+
+.homeContainer>div:nth-child(2)>div:nth-child(1) {
+  @include container(row);
+  width: 100vw;
+  @include height(96);
+  background-image: url(../assets/home/headingBg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.homeContainer>div:nth-child(2)>div:nth-child(1)>p:nth-child(1) {
+  @include font-size(24,700,36);
+}
+
+.homeContainer>div:nth-child(2)>div:nth-child(2) {
+  @include container(column);
+  @include pwh(105, 106, 1440, 1057);
+  @include marginb(34);
+  background-color: #F5F5F5;
+  justify-content: space-between;
+}
+
+.homeContainer>div:nth-child(2)>div:nth-child(2)>div:nth-child(1) {
+  @include container(row);
+  @include width(1230);
+  @include height(351);
+  justify-content: space-between;
+}
+.homeContainer>div:nth-child(2)>div:nth-child(2)>div:nth-child(1)>img:nth-child(1) {
+  @include width(597);
+  @include height(351);
+}
+
+.homeContainer>div:nth-child(2)>div:nth-child(2)>div:nth-child(1)>div:nth-child(2) {
+  @include container(column);
+  @include width(546);
+  @include height(351);
+}
+
+.homeContainer>div:nth-child(2)>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>p:nth-child(1) {
+  @include width(546);
+  @include font-size(24,700,36);
+}
+
+.homeContainer>div:nth-child(2)>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>p:nth-child(2) {
+  @include width(546);
+  @include font-size(18,400,30);
+  color: rgba(0, 0, 0, 0.8);
+  text-align: justify;
+}
+
+.homeContainer>div:nth-child(2)>div:nth-child(2)>div:nth-child(2) {
+  @include container(row);
+  @include width(1230);
+  @include height(351);
+  justify-content: space-between;
+}
+
+.homeContainer>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)>div:nth-child(1)>p:nth-child(1) {
+  @include width(546);
+  @include font-size(24,700,36);
+}
+
+.homeContainer>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)>div:nth-child(1)>p:nth-child(2) {
+  @include width(546);
+  @include font-size(18,400,30);
+  color: rgba(0, 0, 0, 0.8);
+  text-align: justify;
+}
+.homeContainer>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)>img:nth-child(1) {
+  @include width(597);
+  @include height(351);
+}
+
+.homeContainer>div:nth-child(3) {
+  @include container(column);
+  width: 100vw;
+}
+
+.homeContainer>div:nth-child(3)>div:nth-child(1) {
+  @include container(row);
+  width: 100vw;
+  @include height(96);
+  background-image: url(../assets/home/headingBg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.homeContainer>div:nth-child(3)>div:nth-child(1)>p:nth-child(1) {
+  @include font-size(24,700,36);
+}
+
+.homeContainer>div:nth-child(3)>div:nth-child(2) {
+  @include container(column);
+  width: 100vw;
+  @include height(804);
+  @include marginb(34);
+}
+
+.homeContainer>div:nth-child(3)>div:nth-child(2)>p:nth-child(1) {
+  @include width(1153);
+  @include height(96);
+  @include font-size(24,500,29);
+  text-align: center;
+}
+
+.homeContainer>div:nth-child(3)>div:nth-child(2)>img:nth-child(2) {
+  @include container(row);
+  width: 100vw;
+  @include height(708);
+  position: relative;
+}
+//----------------------------------------------------Phone css----------------------------------------------------//
+.homeContainerPhone {
+  @include container(column);
+  width: 100vw;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+.homeContainerPhone>div:nth-child(1) {
+  @include container(column);
+  width: 100vw;
+  @include marginb(34);
+  align-items: flex-start;
+  color: #FFFFFF;
+}
+
+.homeContainerPhone>div:nth-child(1)>div:nth-child(1) {
+  @include container(row);
+  width: 100vw;
+  @include height(315);
+  position: relative;
+  background-image: url(../assets/home/banner1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.homeContainerPhone>div:nth-child(1)>div:nth-child(1)>p:nth-child(1) {
+  position: absolute;
+  @include left(64);
+  @include top(53);
+  @include font-size(20,600,28);
+}
+
+.homeContainerPhone>div:nth-child(1)>div:nth-child(2) {
+  @include container(row);
+  width: 100vw;
+  @include height(405);
+  position: relative;
+  background-image: url(../assets/home/banner2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.homeContainerPhone>div:nth-child(1)>div:nth-child(2)>p:nth-child(1) {
+  position: absolute;
+  @include left(389);
+  @include top(132);
+  @include font-size(22,500,25);
+}
+
+.homeContainerPhone>div:nth-child(1)>div:nth-child(2)>p:nth-child(2) {
+  @include width(266);
+  @include height(50);
+  @include left(389);
+  @include top(184);
+  @include font-size(15,400,18);
+  position: absolute;
+}
+
+.homeContainerPhone>div:nth-child(2) {
+  @include container(column);
+  width: 100vw;
+}
+
+.homeContainerPhone>div:nth-child(2)>div:nth-child(1) {
+  @include container(row);
+  width: 100vw;
+  @include height(60);
+  background-image: url(../assets/home/headingBg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.homeContainerPhone>div:nth-child(2)>div:nth-child(1)>p:nth-child(1) {
+  @include font-size(18,700,25);
+}
+
+.homeContainerPhone>div:nth-child(2)>div:nth-child(2) {
+  @include container(column);
+  @include pwh(66, 66, 900, 661);
+  @include marginb(21);
+  background-color: #F5F5F5;
+  justify-content: space-between;
+}
+
+.homeContainerPhone>div:nth-child(2)>div:nth-child(2)>div:nth-child(1) {
+  @include container(row);
+  @include width(769);
+  @include height(219);
+  justify-content: space-between;
+}
+.homeContainerPhone>div:nth-child(2)>div:nth-child(2)>div:nth-child(1)>img:nth-child(1) {
+  @include width(373);
+  @include height(219);
+}
+
+.homeContainerPhone>div:nth-child(2)>div:nth-child(2)>div:nth-child(1)>div:nth-child(2) {
+  @include container(column);
+  @include width(341);
+  @include height(219);
+}
+
+.homeContainerPhone>div:nth-child(2)>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>p:nth-child(1) {
+  @include width(341);
+  @include font-size(18,700,25);
+}
+
+.homeContainerPhone>div:nth-child(2)>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>p:nth-child(2) {
+  @include width(341);
+  @include font-size(12,400,25);
+  color: rgba(0, 0, 0, 0.8);
+  text-align: justify;
+}
+
+.homeContainerPhone>div:nth-child(2)>div:nth-child(2)>div:nth-child(2) {
+  @include container(row);
+  @include width(769);
+  @include height(219);
+  justify-content: space-between;
+}
+
+.homeContainerPhone>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)>div:nth-child(1)>p:nth-child(1) {
+  @include width(341);
+  @include font-size(18,700,25);
+}
+
+.homeContainerPhone>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)>div:nth-child(1)>p:nth-child(2) {
+  @include width(341);
+  @include font-size(12,400,25);
+  color: rgba(0, 0, 0, 0.8);
+  text-align: justify;
+}
+.homeContainerPhone>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)>img:nth-child(2) {
+  @include width(373);
+  @include height(219);
+}
+
+.homeContainerPhone>div:nth-child(3) {
+  @include container(column);
+  width: 100vw;
+}
+
+.homeContainerPhone>div:nth-child(3)>div:nth-child(1) {
+  @include container(row);
+  width: 100vw;
+  @include height(60);
+  background-image: url(../assets/home/headingBg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.homeContainerPhone>div:nth-child(3)>div:nth-child(1)>p:nth-child(1) {
+  @include font-size(18,700,25);
+}
+
+.homeContainerPhone>div:nth-child(3)>div:nth-child(2) {
+  @include container(column);
+  width: 100vw;
+  @include height(502);
+  @include marginb(21);
+}
+
+.homeContainerPhone>div:nth-child(3)>div:nth-child(2)>p:nth-child(1) {
+  @include width(721);
+  @include height(60);
+  @include marginb(30);
+  @include font-size(18,500,25);
+  text-align: center;
+}
+
+.homeContainerPhone>div:nth-child(3)>div:nth-child(2)>img:nth-child(2) {
+  @include container(row);
+  width: 100vw;
+  @include height(443);
+  position: relative;
+}

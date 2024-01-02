@@ -1,0 +1,2 @@
+pending footer work = onclick of footer insta,fb,linked and subscribe btn
+travel arrow functionality slider.

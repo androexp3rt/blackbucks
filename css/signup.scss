@@ -1,0 +1,101 @@
+@import "cssClasses.scss";
+
+//-----------------------------------------------------Laptop Css----------------------------------------------------------//
+//signup Container
+.signupContainer {
+    @include container(column);
+    @include height(621);
+    width: 100vw;
+    background-image: url(../assets/login/signupBg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    justify-content: flex-start;
+    align-items: center
+}
+
+//-----------------------------------------------------phone Css----------------------------------------------------------//
+//signup Container
+.signupContainerPhone {
+    @include container(column);
+    @include height(550);
+    width: 100vw;
+    background-image: url(../assets/login/signupBgPhone.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    justify-content: flex-start;
+    align-items: center
+}
+
+// altsignup container
+.signupContainer>div:nth-child(1),
+.signupContainerPhone>div:nth-child(1) {
+    @include container(row);
+    @include height(92);
+    @include border-radius(0, 50, 50, 0);
+    @include marginb(100);
+    width: 100vw;
+    background-color: #1E5C54;
+    color: #FFFFFF;
+    justify-content: flex-start;
+    align-items: flex-start
+}
+
+// profile picture container
+.signupContainer>div:nth-child(1)>div:nth-child(1),
+.signupContainerPhone>div:nth-child(1)>div:nth-child(1) {
+    @include container(row);
+    @include width(130);
+    @include height(130);
+    @include border-radius(100,100,100,100);
+    @include box-shadow(2, 2, 1, 0, #D9D9D9);
+    @include top(19);
+    @include center(130);
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+// profile picture
+.signupContainer>div:nth-child(1)>div:nth-child(1)>img,
+.signupContainerPhone>div:nth-child(1)>div:nth-child(1)>img {
+    @include width(124);
+    @include height(124)
+}
+
+// upload button
+.signupContainer>div:nth-child(1)>div:nth-child(2),
+.signupContainerPhone>div:nth-child(1)>div:nth-child(2) {
+    @include width(150);
+    @include height(30);
+    @include font-size(15, 500, 36);
+    @include top(34);
+    @include center-right(150);
+    position: relative;
+}
+
+// signup Form
+.signupContainer>div:nth-child(2)>form:nth-child(1),
+.signupContainerPhone>div:nth-child(2)>form:nth-child(1) {
+    @include container(column);
+    @include width(567);
+    @include height(332);
+}
+
+// signup button container 
+.signupContainer>div:nth-child(2)>form:nth-child(1)>div:nth-child(7),
+.signupContainerPhone>div:nth-child(2)>form:nth-child(1)>div:nth-child(7) {
+    @include container(row);
+    @include phwidth(42, 567);
+    @include height(34);
+    @include margint(16);
+    justify-content: flex-start
+}
+
+// signup button
+.signupContainer>div:nth-child(2)>form:nth-child(1)>div:nth-child(7)>input:nth-child(1),
+.signupContainerPhone>div:nth-child(2)>form:nth-child(1)>div:nth-child(7)>input:nth-child(1) {
+    @include width(110);
+    @include height(36);
+    @include font-size(18, 500, 24)
+}

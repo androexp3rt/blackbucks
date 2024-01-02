@@ -1,0 +1,16 @@
+    (100% - 60px) / 2) = ?????
+
+in CSS the syntax to this expression will be :
+
+    calc(calc(100% - 60px)/2);
+
+which means :
+
+let's suppose we are talking about a property such as width, then for the current element in which we are writing this CSS, its width will be equal to px value of(100% of parent width) minus 60 px and its output divide by 2, then the result will be converted back to `%` and that will be the %value of width of Current element.
+
+and the other way :
+
+    (100% parent width) = X px;
+    X px - 60 px = Y px;
+    (Y px converted to %) = Z %;
+    z % / 2 = result in %;
